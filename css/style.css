@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src: url('../fonts/HelveticaNeue-Bold.otf') format('opentype');
+    src: url('../fonts/HelveticaNeue-Medium.otf') format('opentype');
+    src: url('../fonts/HelveticaNeue-Light.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'HelveticaNeue-Medium', Arial, sans-serif;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.faq-section__support-link{
+	text-decoration: underline;
+}
+.faq-section__support-text{
+	width: 335px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	padding: 10px 0 40px 0;
+}
+.faq-section__title{
+	font-family: HelveticaNeue-Bold;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 36px;
+}
+.faq-section{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 60px;
+	flex-direction: column;
+    align-items: center;
+}
+.accordion{
+	width: 335px;
+	min-height: 60px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	padding: 15px 20px 10px 20px;
+	box-sizing: border-box;
+	background: rgba(247, 248, 251, 1);
+}
+.accordion.active {
+	background: rgba(215, 236, 236, 1);
+}
+.accordion__question{
+	width: 188px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.accordion__content {
+	display: none;
+	overflow: hidden;
+	padding-top: 15px;
+	transition: max-height 0.3s ease-out;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.accordion__item{
+	width: 100%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion__toggle {
+	cursor: pointer;
+	border: 1.5px solid rgba(0, 0, 0, 1);
+	width: 24px ;
+	height: 24px;
+	border-radius: 50px;
+}
+.accordion__toggle:after {
+	font-size: 18px;
+	float: right;
+}
+.accordion__toggle.active:after {
+	content: '-';
+}
+.featured-products{
+	width: 375px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.product-image{
+	width: 158px;
+	height: 199px;
+}
+.product-title{
+	padding-top: 20px;
+}
+.price-product,
+.product-title{
+	font-family: HelveticaNeue-Bold;
+	font-size: 14px;
+	font-weight: 700;
+}
+.product-description{
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	padding: 2px 0 10px 0;
+}
+.price-product.price-old{
+	text-decoration: line-through;
+	color: rgba(163, 163, 163, 1);
+	font-weight: 400;
+	padding-right: 10px;
+}
+.product-list{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product{
+	width: 158px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.product:hover{
+	transform: scale(1.1);
+}
+.featured-products__title{
+	font-family: HelveticaNeue-Bold;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 48px;
+	padding-top: 40px;
+	padding-bottom: 10px;
+}   
+.featured-products__description{
+	padding-bottom: 40px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+@media screen and (min-width: 768px){
+	.faq-section__support-text{
+		width: 460px;
+		font-size: 20px;
+		line-height: 30px;
+		padding-bottom: 20px;
+	}
+	.faq-section__title{
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 60px;
+	}
+	.faq-section{
+		padding-top: 80px;
+	}
+	.accordion{
+		width: 640px;
+	}
+	.accordion__question{
+		width: auto;
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.accordion__item{
+		width: 600px;
+		align-items: end;
+	}
+	.featured-products{
+		width: 768px;
+		padding: 0 60px;
+	}
+	.product-image{
+		width: 300px;
+		height: 337px;
+	}
+	.product-title{
+		font-size: 16px;
+	}
+	.product-description{
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.price-product{
+		font-size: 16px;
+	}
+	.product{
+		width: auto;
+		margin: 10px 10px 30px 10px;
+	}
+	.featured-products__title{
+		font-size: 40px;
+		line-height: 60px;
+		padding: 40px 0 20px;
+	}   
+	.featured-products__description{
+		padding-bottom: 60px;
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+@media screen and (min-width: 1024px){
+	.featured-products{
+		width: 1024px;
+	}
+}
+@media screen and (min-width: 1440px){
+	.faq-section__support-text{
+		padding-bottom: 0;
+	}
+	.faq-section{
+	    flex-direction: row;
+        align-items: flex-start;
+    }
+    .featured-products{
+    	width: 1440px;
+    }
+    .product{
+        margin: 0 0 40px 0;	
+    }
+}
